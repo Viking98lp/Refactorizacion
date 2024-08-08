@@ -1,10 +1,13 @@
 public class Main {
 
     public static void main(String[] args) {
-        Comparendo comparendo =  new Comparendo();
-        comparendo.construirFotoMulta(80, "CARRO");
-        comparendo.construirFotoMulta(200, "MULA");
-        comparendo.construirFotoMulta(40, "CAMION");
-        comparendo.construirFotoMulta(40, "AVION");
+        Comparendo comparendo = new Comparendo();
+
+        String[] tiposVehiculo = {"CARRO", "MULA", "CAMION", "AVION"};
+        int[] velocidades = {80, 200, 40, 40};
+
+        for (int i = 0; i < tiposVehiculo.length; i++) {
+            comparendo.construirFotoMulta(velocidades[i], tiposVehiculo[i]);
+        }
     }
 }
